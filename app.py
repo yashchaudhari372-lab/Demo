@@ -6,7 +6,7 @@ from flask import Flask, request, render_template_string
 app = Flask(__name__)
 
 # Load the SVM model using pickle
-MODEL_PATH = "model.pkl"
+MODEL_PATH = "svm_model.pkl"
 if os.path.exists(MODEL_PATH):
     with open(MODEL_PATH, "rb") as f:
         model = pickle.load(f)
